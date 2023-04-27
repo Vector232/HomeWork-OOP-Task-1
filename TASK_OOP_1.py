@@ -45,7 +45,7 @@ class Student(Person):
         self.grades = {}
 
     def rate_the_lecture(self, lecturer, course, grade = int):
-        if 0 > grade > 10: return 'Неверный бал' #контролируем корректность балла.
+        if 0 > grade > 10: return 'Неверный балл' #контролируем корректность балла.
 
         if isinstance(lecturer, Lecturer) and course in self.courses_in_progress and course in lecturer.courses_attached:
             lecturer.grades.setdefault(course, []).append(grade)
